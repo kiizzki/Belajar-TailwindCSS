@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-4;
+        }
+    </style>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    spacing: {
+                        13: '12px'
+                    },
+                    fontFamily: {
+                        ubuntu: ['Ubuntu']
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'goyang': 'goyang 1s infinite'
+                    },
+                    keyframes: {
+                        goyang: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="dark:bg-slate-900 dark:text-slate-300 font-ubuntu">
+    <h1 class="mb-10 text-5xl font-bold text-center text-slate-700">Mari Belajar <span
+            class="text-transparent duration-500 cursor-pointer bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text hover:drop-shadow-xl ">TailwindCSS</span>
+    </h1>
+    <h1 class="text-center text-slate-700 text-3xl font-bold mb-20">Spacing | Margin, Padding</h1>
+    <section class="p-10 mx-1 mb-10 text-white bg-blue-300 rounded">
+        <h2 class="font-semibold text-center">Spacing</h2>
+        <div class="rounded my-13 bg-slate-300">Margin</div>
+        <div class="p-5 bg-yellow-200 rounded">Padding</div>
+    </section>
+    <section class="p-10 mx-1 mb-10 text-center text-white rounded bg-cyan-200">
+        <h1 class="font-semibold">Padding</h1>
+        <div class="w-32 h-32 bg-gray-400 rounded my-13">kotak 1</div>
+        <div class="p-1 rounded max-w-96 bg-sky-300">kotak 2</div>
+    </section>
+    <hr class="mt-20 border-t-4 mb-20">
+    <h1 class="text-center text-slate-700 text-3xl font-bold mb-20">Typography | Background</h1>
+    <section
+        class="max-w-3xl p-10 mx-auto duration-300 shadow-md font-ubuntu rounded-xl hover:shadow-md hover:scale-105 hover:bg-slate-100 dark:shadow-slate-600 hover:dark:shadow-slate-600 hover:dark:bg-slate-600">
+        <h1 class="mb-1 text-3xl font-bold">Belajar Typography Pada TailwindCSS</h1>
+        <h3 class="mb-4 text-lg">By <a href="#" class="text-sky-500">Mochammad Rizki</a>, 2-28-2024</h3>
+        <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perspiciatis ullam voluptatum
+            debitis quia
+            sapiente. Sapiente iste ipsum <a href="#" class="text-blue-500 underline">maiores</a> architecto quae
+            facilis dicta consectetur dignissimos doloribus
+            placeat ipsa nemo error ut fuga velit exercitationem tenetur ab adipisci mollitia hic sint, qui aperiam
+            consequatur. Ducimus, dolor exercitationem id voluptatibus velit at.
+        </p>
+        <blockquote class="mb-4 italic font-thin">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iste
+            eius qui odit. Non
+            debitiset, sequi repudiandae cum est quia aut iure fugiat similique voluptates ut animi labore id quo in,
+            eum velit odio."
+        </blockquote>
+        <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, eligendi sapiente. Rem vel
+            laborum
+            eveniet natus rerum cupiditate mollitia nihil necessitatibus quo velit? Distinctio quam error soluta
+            voluptatum sit expedita accusantium. Beatae, ut exercitationem eius quaerat voluptatum, quam eaque earum
+            adipisci, tempora sunt quisquam maiores velit repellendus laboriosam vel molestias.
+        </p>
+    </section>
+    <div class="max-w-xl h-96 bg-slate-300 mx-auto p-10 mt-[42px] overflow-y-scroll bg-fixed rounded-xl shadow-lg"
+        style="background-image: url(./img/laptop.jpg);">
+        <p class="text-slate-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi assumenda tempora quae reiciendis,
+            consequuntur, laborum architecto aliquam iure veniam corrupti sequi atque sapiente corporis, animi esse aut!
+            Cumque impedit illo enim, officia beatae temporibus optio eius, velit dicta iusto error ratione facilis.
+            Autem adipisci ut eos hic molestias debitis tempora! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Provident officiis voluptas cumque fugit quae laboriosam beatae eaque placeat ex obcaecati illum
+            praesentium fuga, doloribus perspiciatis laudantium consequatur odit, esse saepe assumenda, atque deserunt.
+            Fugiat provident cum ratione. Ut eos eligendi fugiat cum repellat odio quae molestiae eius repellendus amet
+            natus perferendis molestias voluptas, culpa soluta similique tempore nesciunt, accusantium possimus incidunt
+            fuga, facilis ullam distinctio. Iste perspiciatis quibusdam a facilis beatae incidunt, ut labore, eveniet
+            nemo quidem illo dolore error veniam culpa! Consectetur porro aliquam quia illo eveniet quas voluptas
+            tenetur laboriosam nemo impedit ipsam tempora unde illum corrupti vitae nostrum saepe iusto, id qui.
+            Inventore facilis ex, vero quidem, consequuntur officia illum, autem adipisci amet voluptatum eum quis? Ad,
+            esse. Obcaecati iste iusto cum commodi molestiae incidunt iure velit cupiditate consectetur beatae pariatur
+            tempora provident, et porro recusandae at praesentium consequatur vel voluptate placeat veritatis. Iste
+            nobis in placeat!
+        </p>
+    </div>
+    <div class="flex max-w-xl mx-auto my-32 bg-center bg-no-repeat bg-contain shadow-2xl h-96 bg-slate-300 rounded-3xl shadow-slate-500"
+        style="background-image: url(./img/laptop.jpg);">
+        <div
+            class="flex w-full m-auto transition-all duration-300 shadow-lg h-96 bg-white/30 rounded-3xl dark:shadow-slate-500 shadow-black backdrop-blur-lg hover:backdrop-blur-none hover:bg-transparent hover:shadow-none group">
+            <div
+                class="flex flex-col m-auto text-3xl font-semibold text-center text-white group-hover:hidden font-ubuntu">
+                <h1>Hi There!</h1>
+                <h2>Hover Me</h2>
+            </div>
+        </div>
+    </div>
+    <hr class="mb-20 border-t-4">
+    <h1 class="text-center text-slate-700 text-3xl font-bold">Pseudo Clases | Dark Mode</h1>
+    <div class="flex justify-center m-20">
+        <span class="mr-2 text-sm text-slate-400">Light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-400 rounded-full py-1 px-0.5 flex items-center cursor-pointer">
+                <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+            </div>
+        </label>
+        <span class="ml-2 text-sm text-slate-400">Dark</span>
+    </div>
+    <button
+        class="block px-4 py-2 m-auto text-white duration-300 rounded-full bg-sky-400 hover:bg-sky-500 hover:shadow-lg shadow-black active:bg-sky-300 focus:ring ring-sky-200 dark:bg-slate-600 hover:dark:bg-slate-500 dark:text-slate-300">Simpan</button>
+    <div
+        class="max-w-lg p-5 mx-auto my-10 font-serif duration-300 border shadow-md rounded-xl border-slate-400 hover:bg-sky-400 group hover:dark:shadow-slate-600 hover:dark:bg-slate-600">
+        <h5
+            class="text-lg font-bold text-center text-slate-700 group-hover:text-white selection:bg-lime-300 selection:text-slate-600 dark:text-slate-300">
+            Hai</h5>
+        <p
+            class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-600 first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:text-slate-300">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque necessitatibus, minus recusandae
+            exercitationem at tempora totam, dolorum reprehenderit blanditiis cumque porro accusamus, deleniti in.
+            Laudantium nihil debitis ea minus?</p>
+    </div>
+    <div class="max-w-lg p-5 mx-auto border shadow-md rounded-xl border-slate-200">
+        <form action="">
+            <label for="email">
+                <span
+                    class="font-semibold text-slate-600 after:content-['*'] after:text-red-600  dark:text-slate-300">Email</span>
+                <input type="email" placeholder="Masukkan email" id="email" required
+                    class="w-full px-3 py-2 border rounded-md shadow border-slate-200 placeholder:text-slate-400 focus:outline-none focus:ring focus:ring-sky-300 invalid:text-red-600 invalid:focus:ring-red-200 dark:invalid:focus:red-slate-200 dark:invalid:text-red-200 dark:focus:text-red-200 dark:border-slate-500 dark:bg-slate-600">
+            </label>
+            <button
+                class="px-4 py-2 mt-2 text-white duration-300 rounded-full bg-sky-400 hover:bg-sky-500 hover:shadow-lg shadow-black active:bg-sky-300 focus:ring ring-sky-200 dark:bg-slate-600 hover:dark:bg-slate-500 dark:text-slate-300">Kirim</button>
+        </form>
+    </div>
+    <hr class="mt-20 border-t-4 mb-20">
+    <h1 class="text-center text-slate-700 text-3xl font-bold">Animation</h1>
+    <div
+        class="flex w-40 h-40 mx-auto mt-20 transition origin-top-left bg-indigo-500 rounded-lg shadow-md dark:shadow-slate-300 hover:scale-125 hover:rotate-90 hover:bg-lime-500">
+        <h1 class="m-auto font-semibold text-slate-200 font-ubuntu">Flickering</h1>
+    </div>
+    <div class="w-40 h-40 mx-auto mt-20 group">
+        <div
+            class="flex w-full h-full transition duration-1000 delay-75 origin-top-left rounded-lg shadow-md bg-sky-400 dark:shadow-slate-300 group-hover:scale-125 group-hover:bg-pink-400 group-hover:rotate-180">
+            <h1 class="m-auto font-semibold text-slate-200 font-ubuntu">Smooth</h1>
+        </div>
+    </div>
+    <h1 class="mt-20 font-semibold text-center dark:text-white text-slate-400">Spin Animate</h1>
+    <div class="w-40 h-40 mx-auto mt-20 bg-indigo-500 rounded-lg shadow-md animate-spin">
+    </div>
+    <h1 class="mt-20 font-semibold text-center dark:text-white text-slate-400">Ping Animate</h1>
+    <div class="w-40 h-40 mx-auto mt-20 bg-indigo-500 rounded-lg shadow-md animate-ping">
+    </div>
+    <h1 class="mt-20 font-semibold text-center dark:text-white text-slate-400">Pulse Animate</h1>
+    <div class="w-40 h-40 mx-auto mt-20 bg-indigo-500 rounded-lg shadow-md animate-pulse">
+    </div>
+    <h1 class="mt-20 font-semibold text-center dark:text-white text-slate-400">Bounce Animate</h1>
+    <div class="w-40 h-40 mx-auto mt-20 bg-indigo-500 rounded-lg shadow-md animate-bounce">
+    </div>
+    <h1 class="mt-20 font-semibold text-center dark:text-white text-slate-400">Custom Animate Spin Slow</h1>
+    <div class="w-40 h-40 mx-auto mt-20 bg-indigo-500 rounded-lg shadow-md animate-spin-slow">
+    </div>
+    </div>
+    <h1 class="mt-20 font-semibold text-center dark:text-white text-slate-400">Custom Animate Goyang</h1>
+    <div class="w-40 h-40 mx-auto mt-20 bg-indigo-500 rounded-lg shadow-md animate-goyang">
+    </div>
+    <hr class="my-20 border-t-4">
+    <h1 class="text-center text-slate-700 text-3xl font-bold">Position | Float, Fixed, Absolute, Relative</h1>
+    <div class="container mx-auto p-10">
+        <div class="shadow border rounded-lg p-10 relative">
+            <div class="w-8 h-8 rounded-full shadow bg-sky-400 flex absolute -top-4 -right-4 cursor-pointer">
+                <span class="m-auto text-white">X</span>
+            </div>
+            <div class="w-10 h-10 rounded-full shadow bg-sky-400 flex fixed bottom-5 right-5 cursor-pointer">
+                <a href="#" class="m-auto text-white">🔝</a>
+            </div>
+            <div class="flex justify-center fixed bottom-5 left-5">
+                <span class="mr-2 text-sm text-slate-400">Light</span>
+                <input type="checkbox" id="toggle" class="hidden">
+                <label for="toggle">
+                    <div class="w-9 h-5 bg-slate-400 rounded-full py-1 px-0.5 flex items-center cursor-pointer">
+                        <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+                    </div>
+                </label>
+                <span class="ml-2 text-sm text-slate-400">Dark</span>
+            </div>
+            <img src="./img/laptop.jpg" alt="laptop" width="150px" class="rounded-lg shadow float-left mr-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id accusantium vitae minima, sunt
+                mollitia similique iure cupiditate animi corrupti earum vel et, nostrum deserunt quis dolores inventore
+                aspernatur officia architecto. Fugit officiis ipsum voluptatem. Beatae distinctio corrupti adipisci
+                dolore minima repudiandae magni ducimus eveniet voluptate laborum, debitis natus obcaecati blanditiis
+                reprehenderit quam, minus facilis possimus atque veritatis alias harum saepe iure! Praesentium quod
+                accusantium numquam rerum cumque exercitationem unde maiores earum eius sunt excepturi laborum,
+                necessitatibus quas eveniet, mollitia nisi ea officiis voluptate. Vero iure exercitationem voluptates
+                quia optio aliquam minima libero inventore minus officia beatae totam, aliquid nihil!</p>
+        </div>
+    </div>
+    <h1 class="text-center text-slate-700 text-3xl font-bold">Columns</h1>
+    <div class="shadow border rounded-lg p-5 container mx-auto mt-10 columns-3">
+        <img src="https://images.unsplash.com/photo-1603985724731-287f8d5faf7e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aG9yc2V8fHx8fHwxNzA5MjYxOTE3&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg my-5">
+        <img src="https://images.unsplash.com/photo-1553260485-b073c3515d92?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVzbGF8fHx8fHwxNzA5MjYxODk4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg my-5">
+        <img src="https://images.unsplash.com/photo-1633686457670-2d80f3ce696b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8YW5kcm9pZHx8fHx8fDE3MDkyNjE4NDA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg my-5">
+        <img src="https://images.unsplash.com/photo-1542762933-ab3502717ce7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGFja2VyfHx8fHx8MTcwOTI2MTgwNg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg my-5">
+        <img src="https://images.unsplash.com/photo-1530021232320-687d8e3dba54?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Z2lybHx8fHx8fDE3MDkyNjE3MzU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg my-5">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2FyfHx8fHx8MTcwOTI2MTY1OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+            alt="" class="rounded-lg shadow-lg my-5">
+    </div>
+    <div class="mb-96"></div>
+    <script>
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+
+        checkbox.addEventListener('click', function () {
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        });
+    </script>
+</body>
+
+</html>
