@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .grid-card {
+        @apply bg-sky-500 aspect-video rounded-lg md:aspect-[3/4] xl:aspect-video  overflow-hidden hover:scale-95 transition ease-in-out relative duration-700
+    }
+    .grid-card-image {
+        @apply h-full w-full  bg-cover bg-center group-hover:scale-125 transition duration-700 ease-in-out absolute cursor-pointer
+    }
+}
+
+@layer utilities {
+    #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-4;
+    }
+}

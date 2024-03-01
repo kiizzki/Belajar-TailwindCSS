@@ -5,51 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belajar Tailwind</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-    <style type="text/tailwindcss">
-        #toggle:checked ~ label div.toggle-circle {
-            @apply translate-x-4;
-        }
-    </style>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    spacing: {
-                        13: '12px'
-                    },
-                    fontFamily: {
-                        ubuntu: ['Ubuntu']
-                    },
-                    animation: {
-                        'spin-slow': 'spin 3s linear infinite',
-                        'goyang': 'goyang 1s infinite'
-                    },
-                    keyframes: {
-                        goyang: {
-                            '0%, 100%': { transform: 'rotate(-3deg)' },
-                            '50%': { transform: 'rotate(3deg)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="dark:bg-slate-900 dark:text-slate-300 font-ubuntu">
-    <h1 class="mb-10 text-5xl font-bold text-center text-slate-700">Mari Belajar <span
+    <h1 class="mb-10 text-5xl font-bold text-center text-slate-500">Mari Belajar <span
             class="text-transparent duration-500 cursor-pointer bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text hover:drop-shadow-xl ">TailwindCSS</span>
     </h1>
-    <h1 class="text-center text-slate-700 text-3xl font-bold mb-20">Spacing | Margin, Padding</h1>
-    <section class="p-10 mx-1 mb-10 text-white bg-blue-300 rounded">
+    <h1 class="mb-20 text-3xl font-bold text-center text-slate-500">Spacing | Margin, Padding</h1>
+    <section class="p-10 bg-blue-300 rounded text-white">
         <h2 class="font-semibold text-center">Spacing</h2>
         <div class="rounded my-13 bg-slate-300">Margin</div>
         <div class="p-5 bg-yellow-200 rounded">Padding</div>
@@ -59,8 +28,8 @@
         <div class="w-32 h-32 bg-gray-400 rounded my-13">kotak 1</div>
         <div class="p-1 rounded max-w-96 bg-sky-300">kotak 2</div>
     </section>
-    <hr class="mt-20 border-t-4 mb-20">
-    <h1 class="text-center text-slate-700 text-3xl font-bold mb-20">Typography | Background</h1>
+    <hr class="mt-20 mb-20 border-t-4">
+    <h1 class="mb-20 text-3xl font-bold text-center text-slate-500">Typography | Background</h1>
     <section
         class="max-w-3xl p-10 mx-auto duration-300 shadow-md font-ubuntu rounded-xl hover:shadow-md hover:scale-105 hover:bg-slate-100 dark:shadow-slate-600 hover:dark:shadow-slate-600 hover:dark:bg-slate-600">
         <h1 class="mb-1 text-3xl font-bold">Belajar Typography Pada TailwindCSS</h1>
@@ -107,7 +76,7 @@
     <div class="flex max-w-xl mx-auto my-32 bg-center bg-no-repeat bg-contain shadow-2xl h-96 bg-slate-300 rounded-3xl shadow-slate-500"
         style="background-image: url(./img/laptop.jpg);">
         <div
-            class="flex w-full m-auto transition-all duration-300 shadow-lg h-96 bg-white/30 rounded-3xl dark:shadow-slate-500 shadow-black backdrop-blur-lg hover:backdrop-blur-none hover:bg-transparent hover:shadow-none group">
+            class="flex w-full m-auto transition-all duration-300 h-96 bg-white/30 rounded-3xl dark:shadow-slate-500 shadow-black backdrop-blur-lg hover:backdrop-blur-none hover:bg-transparent hover:shadow-none group">
             <div
                 class="flex flex-col m-auto text-3xl font-semibold text-center text-white group-hover:hidden font-ubuntu">
                 <h1>Hi There!</h1>
@@ -116,7 +85,7 @@
         </div>
     </div>
     <hr class="mb-20 border-t-4">
-    <h1 class="text-center text-slate-700 text-3xl font-bold">Pseudo Clases | Dark Mode</h1>
+    <h1 class="text-3xl font-bold text-center text-slate-500">Pseudo Clases | Dark Mode</h1>
     <div class="flex justify-center m-20">
         <span class="mr-2 text-sm text-slate-400">Light</span>
         <input type="checkbox" id="toggle" class="hidden">
@@ -132,7 +101,7 @@
     <div
         class="max-w-lg p-5 mx-auto my-10 font-serif duration-300 border shadow-md rounded-xl border-slate-400 hover:bg-sky-400 group hover:dark:shadow-slate-600 hover:dark:bg-slate-600">
         <h5
-            class="text-lg font-bold text-center text-slate-700 group-hover:text-white selection:bg-lime-300 selection:text-slate-600 dark:text-slate-300">
+            class="text-lg font-bold text-center text-slate-500 group-hover:text-white selection:bg-lime-300 selection:text-slate-600 dark:text-slate-300">
             Hai</h5>
         <p
             class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-600 first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:text-slate-300">
@@ -152,15 +121,15 @@
                 class="px-4 py-2 mt-2 text-white duration-300 rounded-full bg-sky-400 hover:bg-sky-500 hover:shadow-lg shadow-black active:bg-sky-300 focus:ring ring-sky-200 dark:bg-slate-600 hover:dark:bg-slate-500 dark:text-slate-300">Kirim</button>
         </form>
     </div>
-    <hr class="mt-20 border-t-4 mb-20">
-    <h1 class="text-center text-slate-700 text-3xl font-bold">Animation</h1>
+    <hr class="mt-20 mb-20 border-t-4">
+    <h1 class="text-3xl font-bold text-center text-slate-500">Animation</h1>
     <div
         class="flex w-40 h-40 mx-auto mt-20 transition origin-top-left bg-indigo-500 rounded-lg shadow-md dark:shadow-slate-300 hover:scale-125 hover:rotate-90 hover:bg-lime-500">
         <h1 class="m-auto font-semibold text-slate-200 font-ubuntu">Flickering</h1>
     </div>
     <div class="w-40 h-40 mx-auto mt-20 group">
         <div
-            class="flex w-full h-full transition duration-1000 delay-75 origin-top-left rounded-lg shadow-md bg-sky-400 dark:shadow-slate-300 group-hover:scale-125 group-hover:bg-pink-400 group-hover:rotate-180">
+            class="flex w-full h-full transition duration-700 delay-75 origin-top-left rounded-lg shadow-md bg-sky-400 dark:shadow-slate-300 group-hover:scale-125 group-hover:bg-pink-400 group-hover:rotate-180">
             <h1 class="m-auto font-semibold text-slate-200 font-ubuntu">Smooth</h1>
         </div>
     </div>
@@ -184,16 +153,16 @@
     <div class="w-40 h-40 mx-auto mt-20 bg-indigo-500 rounded-lg shadow-md animate-goyang">
     </div>
     <hr class="my-20 border-t-4">
-    <h1 class="text-center text-slate-700 text-3xl font-bold">Position | Float, Fixed, Absolute, Relative</h1>
-    <div class="container mx-auto p-10">
-        <div class="shadow border rounded-lg p-10 relative">
-            <div class="w-8 h-8 rounded-full shadow bg-sky-400 flex absolute -top-4 -right-4 cursor-pointer">
+    <h1 class="text-3xl font-bold text-center text-slate-500">Position | Float, Fixed, Absolute, Relative</h1>
+    <div class="container p-10 mx-auto">
+        <div class="relative p-10 border rounded-lg shadow">
+            <div class="absolute flex w-8 h-8 rounded-full shadow cursor-pointer bg-sky-400 -top-4 -right-4">
                 <span class="m-auto text-white">X</span>
             </div>
-            <div class="w-10 h-10 rounded-full shadow bg-sky-400 flex fixed bottom-5 right-5 cursor-pointer">
+            <div class="fixed flex w-10 h-10 rounded-full shadow cursor-pointer bg-sky-400 bottom-5 right-5">
                 <a href="#" class="m-auto text-white">🔝</a>
             </div>
-            <div class="flex justify-center fixed bottom-5 left-5">
+            <div class="fixed flex justify-center bottom-5 left-5">
                 <span class="mr-2 text-sm text-slate-400">Light</span>
                 <input type="checkbox" id="toggle" class="hidden">
                 <label for="toggle">
@@ -203,7 +172,7 @@
                 </label>
                 <span class="ml-2 text-sm text-slate-400">Dark</span>
             </div>
-            <img src="./img/laptop.jpg" alt="laptop" width="150px" class="rounded-lg shadow float-left mr-2">
+            <img src="./img/laptop.jpg" alt="laptop" width="150px" class="float-left mr-2 rounded-lg shadow">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates id accusantium vitae minima, sunt
                 mollitia similique iure cupiditate animi corrupti earum vel et, nostrum deserunt quis dolores inventore
                 aspernatur officia architecto. Fugit officiis ipsum voluptatem. Beatae distinctio corrupti adipisci
@@ -214,15 +183,292 @@
                 quia optio aliquam minima libero inventore minus officia beatae totam, aliquid nihil!</p>
         </div>
     </div>
-    <h1 class="text-center text-slate-700 text-3xl font-bold">Columns</h1>
-    <div class="shadow border rounded-lg mx-auto p-10 mt-10 columns-3">
-        <img src="https://images.unsplash.com/photo-1603985724731-287f8d5faf7e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aG9yc2V8fHx8fHwxNzA5MjYxOTE3&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg mb-5 ">
-        <img src="https://images.unsplash.com/photo-1553260485-b073c3515d92?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVzbGF8fHx8fHwxNzA5MjYxODk4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg mb-5 ">
-        <img src="https://images.unsplash.com/photo-1633686457670-2d80f3ce696b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8YW5kcm9pZHx8fHx8fDE3MDkyNjE4NDA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg mb-5 ">
-        <img src="https://images.unsplash.com/photo-1542762933-ab3502717ce7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGFja2VyfHx8fHx8MTcwOTI2MTgwNg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg mb-5 ">
-        <img src="https://images.unsplash.com/photo-1530021232320-687d8e3dba54?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Z2lybHx8fHx8fDE3MDkyNjE3MzU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="" class="rounded-lg shadow-lg mb-5 ">
+    <h1 class="text-3xl font-bold text-center text-slate-500">Columns</h1>
+    <div class="p-10 mx-auto mt-10 border rounded-lg shadow columns-3">
+        <img src="https://images.unsplash.com/photo-1603985724731-287f8d5faf7e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aG9yc2V8fHx8fHwxNzA5MjYxOTE3&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+            alt="" class="mb-5 rounded-lg shadow-lg ">
+        <img src="https://images.unsplash.com/photo-1553260485-b073c3515d92?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8dGVzbGF8fHx8fHwxNzA5MjYxODk4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+            alt="" class="mb-5 rounded-lg shadow-lg ">
+        <img src="https://images.unsplash.com/photo-1633686457670-2d80f3ce696b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8YW5kcm9pZHx8fHx8fDE3MDkyNjE4NDA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+            alt="" class="mb-5 rounded-lg shadow-lg ">
+        <img src="https://images.unsplash.com/photo-1542762933-ab3502717ce7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGFja2VyfHx8fHx8MTcwOTI2MTgwNg&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+            alt="" class="mb-5 rounded-lg shadow-lg ">
+        <img src="https://images.unsplash.com/photo-1530021232320-687d8e3dba54?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Z2lybHx8fHx8fDE3MDkyNjE3MzU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+            alt="" class="mb-5 rounded-lg shadow-lg ">
         <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2FyfHx8fHx8MTcwOTI2MTY1OA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
-            alt="" class="rounded-lg shadow-lg mb-5 ">
+            alt="" class="mb-5 rounded-lg shadow-lg ">
+    </div>
+    <hr class="my-20 border-t-4">
+    <h1 class="mb-20 text-3xl font-bold text-center text-slate-500">Responsive Design | Flex</h1>
+    <div class="container p-6 mx-auto lg:flex sm:max-w-xl md:max-w-4xl lg:max-w-full lg:p-0">
+        <div class="lg:p-12 lg:flex-1">
+            <h1 class="mb-2 text-4xl font-bold text-slate-500 sm:mb-4 ">Mochammad <span
+                    class="text-sky-400">Rizki</span></h1>
+            <img src="./img/laptop.jpg" alt="laptop"
+                class="shadow rounded-xl sm:w-full sm:h-72 sm:object-cover sm:object-top md:h-96 md:object-center lg:hidden">
+            <h3 class="my-2 text-2xl font-semibold sm:text-3xl text-slate-500 sm:my-4">Mari Belajar Programming</h3>
+            <p class="text-slate-500 sm:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id eos
+                consectetur voluptatem, ab sed ipsum
+                excepturi, eius quod, illo obcaecati minus aspernatur sequi est. Eos sunt facere velit molestias, natus
+                corporis sequi voluptatem. Voluptatum, doloribus. Amet assumenda nisi voluptas, corrupti quae a quos,
+                dolor
+                reiciendis sapiente molestiae iste quidem dolore.</p>
+            <div class="mt-2 sm:mt-4">
+                <a href="https://www.youtube.com/@kiizzki"
+                    class="inline-block px-4 py-2 font-semibold tracking-wide text-white transition duration-500 bg-red-500 rounded-lg shadow-md hover:shadow-xl hover:bg-red-600"
+                    target="_blank">Subscribe Channel Youtube</a>
+            </div>
+        </div>
+        <div class="hidden lg:flex lg:w-1/2">
+            <img src="./img/laptop.jpg" alt="laptop" class="object-cover rounded-l-full shadow-2xl">
+        </div>
+    </div>
+    <h2 class="my-10 text-3xl font-bold text-center text-slate-500">My Gallery</h2>
+    <div class="container px-6 mx-auto sm:flex sm:flex-wrap sm:justify-evenly sm:gap-5">
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk0NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk0NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk0NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk0NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1618401479427-c8ef9465fbe1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk0NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk5OQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+        <div class="mb-10 overflow-hidden shadow-lg rounded-xl sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+            <img src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29kaW5nfHx8fHx8MTcwOTI4NDk2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600"
+                alt="Coding" class="w-full">
+            <div class="px-4 py-6">
+                <div class="mb-2 text-xl font-bold text-center uppercase text-slate-500">Image Title</div>
+                <p class="text-sm text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, vitae
+                    iure tempore esse repellendus
+                    nostrum
+                    sint sequi dolorum quaerat eaque deleniti fuga maiores rerum doloribus.</p>
+            </div>
+        </div>
+    </div>
+    <hr class="mt-20 border-t-4">
+    <h1 class="my-20 text-3xl font-bold text-center text-slate-500">Responsive Design | Grid</h1>
+    <div class="grid grid-cols-2 gap-2 p-2 md:grid-cols-4 md:p4">
+        <h2 class="text-xl font-semibold text-slate-500 md:col-start-4 md:row-start-2 md:flex"><span
+                class="self-center">Mochammad Rizki</span></h2>
+        <div class="text-xl font-semibold text-slate-500 md:col-start-2 md:row-start-2 md:flex"><span
+                class="self-center">@kiizzki</span></div>
+        <div
+            class="grid-card md:row-start-1 group hover:scale-95">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1525373698358-041e3a460346?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFwdG9wfHx8fHx8MTcwOTI5MTUxOA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-3 md:row-start-1 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1559163179-3fd017552229?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFwdG9wfHx8fHx8MTcwOTI5MTU2NQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-4 md:row-start-1 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1509376642819-55dd03bd83a8?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8d29tYW58fHx8fHwxNzA5MjkxNjY1&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] gris-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-1 md:row-start-2 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1621135802920-133df287f89c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bGFtYm9yZ2hpbml8fHx8fHwxNzA5MjkxNzAz&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-3 md:row-start-2 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1481214110143-ed630356e1bb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8d29tZW58fHx8fHwxNzA5MjkxNzUw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-2 md:row-start-3 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1635098996189-6edad727a0f4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8d29tZW58fHx8fHwxNzA5MjkxNzc5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-4 md:row-start-3 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1613381741586-dd07826edc19?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8d29tZW58fHx8fHwxNzA5MjkxNzk4&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-1 md:row-start-4 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1592423777039-7be9f340582b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8bGF0aW5hfHx8fHx8MTcwOTI5MTgxOQ&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-3 md:row-start-4 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1590739293931-8849049774f1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8d29tZW58fHx8fHwxNzA5MjkxOTE5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
+        <div
+            class="md:col-start-3 md:row-start-5 group grid-card">
+            <div
+                class="bg-[url(https://images.unsplash.com/photo-1604436607823-d721dfe2df46?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8d29tZW58fHx8fHwxNzA5MjkxOTM0&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600)] grid-card-image">
+            </div>
+        </div>
     </div>
     <div class="mb-96"></div>
     <script>
